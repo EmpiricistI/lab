@@ -1,0 +1,63 @@
+
+#include<iostream>
+using namespace std;
+class matrix
+{
+int a[10][10],m,n;
+public:
+void input();
+void output();
+matrix operator + (matrix x);
+};
+void matrix::input()
+{
+int i,j;
+cout<<"\nENTERORDEROFMATRIX:"<<endl;
+cin>>m>>n;
+cout<<"\nENTERTHEELEMENTSOFMATRIX:"<<endl;
+for(i=0;i<m;i++)
+for(j=0;j<n;j++)
+cin>>a[i][j];
+}
+void matrix::output()
+{
+int i,j;
+for(i=0;i<m;i++)
+{
+for(j=0;j<n;j++)
+cout<<a[i][j]<<"\t";
+cout<<endl;
+}
+}
+matrix matrix::operator+(matrixx)
+{
+matrix c;
+int i,j,k;
+if(n==x.m)
+{
+c.m=m;
+c.n=x.n;
+for(i=0;i<m;i++)
+for(j=0;j<x.n;j++)
+{
+c.a[i][j]=0;
+for(k=0;k<m;k++)
+c.a[i][j]+=a[i][k]+x.a[k][j];
+}
+return c;
+}
+else
+cout<<"\nADDISNOTPOSSIBLE";
+}
+int main()
+{
+matrix A,B,C;
+cout<<"\nENTERAMATRIXORDERANDELEMENTS";
+A.input();
+cout<<"\nENTERBMATRIXORDERANDELEMENTS";
+B.input();
+C=A+B;
+cout<<"ADDITIONOFTWOMATRIXIS="<<endl;
+C.output();
+return 0;
+}
