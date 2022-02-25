@@ -1,0 +1,68 @@
+
+#include<iostream>
+using namespacestd;
+class student
+{
+int m1,m2,m3,tot;
+float avg;
+char usn[11], name[15];
+public:
+voidread();
+voidaverage();
+voiddisplay();
+};
+
+
+voidstudent::read()
+{
+cout<<"Enter the student USNno:";
+cin>>usn;
+cout<<"\nEnter the student NAME:";
+cin>>name;
+cout<<"\nEnter the student test marks1:";
+cin>>m1;
+cout<<"\nEnter the student test marks2:";
+cin>>m2;
+cout<<"\nEnter the studenttestmarks3:";
+cin>>m3;
+}
+
+
+voidstudent::average()
+{
+if(m1<m2 && m1<m3)
+avg=(m2+m3)/2;
+else if(m2<m3)
+avg =(m1+m3)/2;
+else
+avg=(m1+m2)/2;
+}
+
+
+void student::display()
+{
+cout<<"\n==============Detailsofthestudent"<<name<<"============="<<endl;
+cout<<"USN:"<<usn<<endl;
+cout<<"NAME:"<<name<<endl;
+cout<<"MARKS1:"<<m1<<endl;
+cout<<"MARKS2:"<<m2<<endl;
+cout<<"MARKS3:"<<m3<<endl;
+cout<<"========================================================"<<endl;
+cout<<"AVERAGEOFBESTOFTWOMARKS:"<<avg<<endl;
+}
+
+
+int main()
+{
+int i,n;
+students [10];
+cout<<"=========ENTERTHENUMBEROFSTUDENTS========="<<endl;
+cin>>n;
+for(i=0;i<n;i++)
+s[i].read();
+for(i=0;i<n;i++)
+s[i].average();
+for(i=0;i<n;i++)
+s[i].display();
+return 0;
+}
