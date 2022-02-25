@@ -1,0 +1,45 @@
+
+#include<iostream>
+using namespace std;
+template <class T>
+void bubble(T a[],int n)
+{
+int i,j;
+for(i=0;i<n-1;i++)
+{
+for(j=i+1;j<n;j++)
+{
+if(a[i]>a[j])
+{
+T temp;
+temp=a[i];
+a[i]=a[j];
+a[j]=temp;
+}}}}
+int main()
+{
+int a[10],m,n,i,j;
+double d[10];
+cout<<"\nSortinganarrayofINTEGERS";
+cout<<"\nEnterthesizeofintegerarray:";
+cin>>m;
+cout<<"\nEntertheINTEGERvalues:"<<endl;
+for(i=0;i<m;i++)
+cin>>a[i];
+bubble(a,m);
+cout<<"\nSortedOrderofIntegers:";
+for(i=0;i<m;i++)
+cout<<a[i]<<"\t";
+cout<<"\n"<<endl;
+cout<<"\nSortinganarrayofDOUBLES";
+cout<<"\nEnterthesizeofdoublearray:";
+cin>>n;
+cout<<"\nEntertheDOUBLEvalues:"<<endl;
+for(j=0;j<n;j++)
+cin>>d[j];
+bubble(d,n);
+cout<<"\nSortedOrderofDoubles:";
+for(j=0;j<n;j++)
+cout<<d[j]<<"\t";
+return 0;
+}
