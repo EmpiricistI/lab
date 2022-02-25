@@ -1,0 +1,80 @@
+
+#include<iostream>
+using namespace std;
+class student
+{
+int usn,age;
+char name[20];
+public:
+void inputstudent()
+{
+cout<<"\nENTERSTUDENTUSNNUMBER"<<endl;
+cin>>usn;
+cout<<"\nENTERSTUDENTNAME"<<endl;
+cin>>name;
+cout<<"\nENTERSTUDENTAGE"<<endl;
+cin>>age;
+}
+void showstudent()
+{
+cout<<"\n=======THESTUDENTDETAILSARE======="<<endl;
+cout<<"\nSTUDENTUSNNUMBER="<<usn;
+cout<<"\nSTUDENTNAMEIS="<<name;
+cout<<"\nSTUDENTAGEIS="<<age;
+}
+}
+class marks:public student
+{
+protected:
+int m1,m2,m3;
+public:
+void getmarks()
+{
+cout<<"\nENTERTHESTUDENTMARKSM1,M2&M3"<<endl;
+cin>>m1>>m2>>m3;
+}
+void showmarks()
+{
+cout<<"\nTHEAVERAGEPERCENTAGEOFMARKS"<<(m1+m2+m3)/3;
+}
+};
+class sports:public marks
+{
+private:
+char name[20];
+char ach[100];
+public:
+void getsports()
+{
+cout<<"\nENTERTHESPORTSNAME"<<endl;
+cin>>name;
+cout<<"\nENTERTHESPORTSACHIEVEMENTS"<<endl;
+cin>>ach;
+}
+void showsports()
+{
+cout<<"\nTHESPORTSDETAILSARE"<<endl;
+cout<<name<<endl;
+cout<<ach;
+}
+};
+int main()
+{
+int j,m;
+sports s[5];
+cout<<"\nENTERTHENO.OFSTUDENTS"<<endl;
+cin>>m;
+for(j=0;j<m;j++)
+{
+s[j].inputstudent();
+s[j].getmarks();
+s[j].getsports();
+}
+for(j=0;j<m;j++)
+{
+s[j].showstudent();
+s[j].showmarks();
+s[j].showsports();
+}
+return 0;
+}
