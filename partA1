@@ -13,7 +13,7 @@ voiddisplay();
 };
 
 
-voidstudent::read()
+void student::read()
 {
 cout<<"Enter the student USNno:";
 cin>>usn;
@@ -28,7 +28,7 @@ cin>>m3;
 }
 
 
-voidstudent::average()
+void student::average()
 {
 if(m1<m2 && m1<m3)
 avg=(m2+m3)/2;
