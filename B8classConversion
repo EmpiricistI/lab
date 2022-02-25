@@ -1,0 +1,39 @@
+
+#include<iostream>
+using namespace std;
+class Destination
+{
+float a;
+public:
+Destination(int d)
+{
+a=d/2;
+}
+void show()
+{
+cout<<"halfvalue="<<endl<<a;
+}
+};
+class Source
+{
+float p;
+public:
+Source(float x)
+{
+p=x;
+}
+operator Destination()
+{
+return Destination(p);
+}
+};
+int main()
+{
+float b;
+cout<<"EnteraNumber="<<endl;
+cin>>b;
+Source src(b);
+Destination des=src;
+des.show();
+return 0;
+}
