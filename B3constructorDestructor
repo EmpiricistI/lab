@@ -1,0 +1,43 @@
+
+#include<iostream>
+using namespace std;
+class Base
+{
+public:
+Base()
+{
+cout<<"BaseClassConstructor\n";
+}
+~Base()
+{
+cout<<"BaseClassDestructor\n";
+}
+};
+class dev1:public Base
+{
+public:
+dev1()
+{
+cout<<"dev1ClassConstructor\n";
+}
+~dev1()
+{
+cout<<"dev1ClassDestructor\n";
+}
+};
+class dev2:public dev1
+{
+public:
+dev2()
+{
+cout<<"dev2ClassConstructor\n";
+}
+~dev2()
+{
+cout<<"dev2ClassConstructor\n";
+}
+};
+int main()
+{
+dev2 D;
+}
