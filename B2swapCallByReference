@@ -1,0 +1,22 @@
+
+#include<iostream>
+using namespace std;
+voidswap(int &x,int &y);
+int main()
+{
+int a=100;
+int b=200;
+cout<<"ValueofA,beforeswapping:"<<a<<endl;
+cout<<"ValueofB,beforeswapping:"<<b<<endl;
+swap(a,b);
+cout<<"ValueofA,Afetrswapping:"<<a<<endl;
+cout<<"ValueofB,Afterswapping:"<<b<<endl;
+return 0;
+}
+void swap(int &x,int &y)
+{
+int temp;
+temp=x;
+x=y;
+y=temp;
+}
