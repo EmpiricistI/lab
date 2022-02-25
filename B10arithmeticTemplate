@@ -1,0 +1,44 @@
+
+#include<iostream>
+using namespace std;
+template<class T>
+class Airthmatic
+{
+T value1,value2;
+public:
+Airthmatic(T first,T second)
+{
+value1=first;
+value2=second;
+}
+T add()
+{
+return value1+value2;
+}
+T sub()
+{
+return value1-value2;
+}
+T product()
+{
+return value1*value2;
+}
+T division()
+{
+return value1/value2;
+}
+};
+int main()
+{
+Airthmatic<int>intobj(500,100);
+cout<<"Additionofintegernumber="<<intobj.add()<<endl;
+cout<<"Subtractionofintegernumber="<<intobj.sub()<<endl;
+cout<<"Productofintegernumber="<<intobj.product()<<endl;
+cout<<"Divisionofintegernumber="<<intobj.division()<<endl;
+Airthmatic<double>doubleobj(99.99,11.11);
+cout<<"Additionofdoublenumber="<<doubleobj.add()<<endl;
+cout<<"Subtractionofdoublenumber="<<doubleobj.sub()<<endl;
+cout<<"Productofdoublenumber="<<doubleobj.product()<<endl;
+cout<<"Divisionofdoublenumber="<<doubleobj.division()<<endl;
+return 0;
+}
