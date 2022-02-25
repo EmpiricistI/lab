@@ -1,0 +1,40 @@
+
+#include<iostream>
+using namespace std;
+class Rectangle
+{
+protected:
+float length,breadth;
+public:
+Rectangle()
+{
+cout<<"Enterlength:";
+cin>>length;
+cout<<"Enterbreadth:";
+cin>>breadth;
+}
+};
+class Area:public Rectangle
+{
+public:
+float calc_area()
+{
+return length*breadth;
+}
+};
+class Perimeter:public Area
+{
+public:
+float calc_per()
+{
+return 2*(length+breadth);
+}
+};
+int main()
+{
+cout<<"EnterLengthandbreadthofarectangletofindarea&perimeter.\n";
+Perimeter p;
+cout<<"Area="<<p.calc_area()<<"squaremeter\n\n";
+cout<<"\nPerimeter="<<p.calc_per()<<"meter";
+return 0;
+}
