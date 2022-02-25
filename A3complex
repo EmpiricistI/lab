@@ -1,0 +1,62 @@
+
+#include<iostream>
+using namespace std;
+
+class COMPLEX
+{
+private:
+float real,imag;
+public:
+void input()
+{
+cout<<"EnterReal&Imagnumbers:";
+cin>>real>>imag;
+}
+COMPLEX add(int a,COMPLEX s2)
+{
+s2.real=a+s2.real;
+return s2;
+}
+COMPLEX add(COMPLEX s1,COMPLEX s2)
+{
+COMPLEX s3;
+s3.real=s1.real+s2.real;
+s3.imag=s1.imag+s2.imag;
+return s3;
+}
+void display()
+{
+cout<<real<<"+i"<<imag;
+}
+};
+
+int main()
+{
+COMPLEX a,b,c
+int x,ch;
+while(1)
+{
+cout<<"\n1.AddINTEGER&COMPLEXnumber:\n";
+cout<<"2.AddtwoCOMPLEXnumbers:\n";
+cout<<"3.Exit\n";
+cout<<"Enteryourchoice:";
+cin>>ch;
+switch(ch)
+{
+case1:cout<<"Entertheintegernumber:";
+      cin>>x;
+      a.input();
+      b=b.add(x,a);
+      b.display();
+      break;
+case2:a.input();
+      b.input();
+      c=c.add(a,b);
+      c.display();
+      break;
+case3:exit(0);
+      default:cout<<"InvalidOption";
+      return 0;
+}
+}
+}
