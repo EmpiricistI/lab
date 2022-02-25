@@ -1,0 +1,78 @@
+
+#include<iostream>
+using namespace std;
+
+class currentacc;
+
+class savingacc
+{
+public:
+float balance;
+
+void deposite()
+{
+float damt;
+cout<<"\nDEPOSITINGINSAVINGACCOUNT\n";
+cout<<"Entertheamounttodeposit:";
+cin>>damt;
+balance+=damt;
+}
+
+void withdraw()
+{
+float amt;
+cout<<"\nWITHDRAWLFROMSAVINGACCOUNT\n";
+cout<<"Entertheamounttowithdraw:";
+cin>>amt;
+balance-=amt;
+}
+
+friend void display_balance(savingacc,currentacc);
+
+};
+
+class currentacc
+{
+public:
+float balance;
+
+void deposite()
+{
+float damt;
+cout<<"\nDEPOSITINGINCURRENTACCOUNT\n";
+cout<<"Entertheamounttodeposit:";
+cin>>damt;
+balance+=damt;
+}
+
+void withdraw()
+{
+float amt;
+cout<<"\nWITHDRAWLFROMCURRENTACCOUNT\n";
+cout<<"Entertheamounttowithdraw:";
+cin>>amt;
+balance-=amt;
+}
+
+friend void display_balance(savingacc,currentacc);
+
+};
+
+void display_balance(savingaccs,currentaccc)
+{
+cout<<"TheTotalBalanceinSaving&Currentsaccountsis:
+"<<s.balance+c.balance;
+}
+
+
+int main()
+{
+savingacc s;
+currentacc c;
+s.deposite();
+s.withdraw();
+c.deposite();
+c.withdraw();
+display_balance(s,c);
+return 0;
+} 
