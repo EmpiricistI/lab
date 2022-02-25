@@ -1,0 +1,29 @@
+
+#include<iostream>
+using namespace std;
+class base
+{
+protected:
+int i;
+public:
+base(int x)
+{
+i=x;
+cout<<"ConstructingParameterizedConstructorofBase:i="<<i<<endl;
+}
+};
+class derived:public base
+{
+int j;
+public:
+derived(int x,int y):base(x)
+{
+j=y;
+cout<<"ConstructingParameterizedConstructorofDerived:j="<<j<<endl;
+}
+};
+int main()
+{
+derived ob(10,20);
+return 0;
+}
