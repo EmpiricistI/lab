@@ -55,7 +55,7 @@ cout<<"AVERAGEOFBESTOFTWOMARKS:"<<avg<<endl;
 int main()
 {
 int i,n;
-students [10];
+student s[10];
 cout<<"=========ENTERTHENUMBEROFSTUDENTS========="<<endl;
 cin>>n;
 for(i=0;i<n;i++)
